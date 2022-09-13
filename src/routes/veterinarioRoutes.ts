@@ -1,16 +1,13 @@
 import { Router, Request, Response } from 'express';
+import { perfilVeterinario, registrarVeterinario } from '../controllers/veterinarioController';
 
 
 const routerVet = Router();
 
 // route para el registro
-routerVet.post('/registro', (req: Request, res: Response) => {
-   res.send('Desde POST /registo')
-})
+routerVet.post('/registro', registrarVeterinario)
 
 // route para el perfil
-routerVet.get('/perfil', (req: Request, res: Response) => {
-   res.send('Desde GET /perfil')
-})
+routerVet.get('/perfil', perfilVeterinario)
 
 export { routerVet };
