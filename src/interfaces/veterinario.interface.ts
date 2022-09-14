@@ -6,4 +6,6 @@ export interface Veterinario {
   web?: string;
   token?: string;
   confirmed?: boolean;
+  // timesStamps?: boolean,
+  // versionKey?: boolean,
 }
