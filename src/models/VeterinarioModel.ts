@@ -11,6 +11,7 @@ const veterinarioSchema = new Schema<Veterinario>(
     password: {
       type: String,
       required: true,
+      trim: true,
     },
     email: {
       type: String,
@@ -26,6 +27,7 @@ const veterinarioSchema = new Schema<Veterinario>(
     web: {
       type: String,
       default: null,
+      trim: true,
     },
     token: {
       type: String
@@ -36,7 +38,7 @@ const veterinarioSchema = new Schema<Veterinario>(
     },
   },
   {
-    timesStamps: true,
+    timestamps: true,
     versionKey: false,
   }
 );
